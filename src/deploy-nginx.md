@@ -60,7 +60,7 @@ server{
     charset UTF-8;
     location / {
         index index.html index.htm;
-        root /usr/share/nginx/html/;
+        root /data/www/blog.mhgoi.net/html;
         try_files $uri /index.html;
         if ($uri ~* ^.+\.(css|js|swf|png|woff|woff2|webp|svg|jgp)$) {
             access_log off;

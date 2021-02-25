@@ -15,5 +15,6 @@ npm run build
 
 ## 发布
 ```bash
-cp dist/* /usr/share/nginx/html/
+mkdir -p /data/www/blog.mhgoi.net/html
+cp dist/* /data/www/blog.mhgoi.net/html
 ```

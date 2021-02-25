@@ -4,7 +4,7 @@
 根据需要修改vue.config.js的publicPath
 
 ```json
-publicPath: '/wp-admin',
+publicPath: '/',
 ```
 
 ```bash
@@ -15,6 +15,6 @@ npm run build
 
 ## 发布
 ```bash
-mkdir -p /usr/share/nginx/html/wp-admin
-cp dist/* /usr/share/nginx/html/wp-admin
+mkdir -p /data/www/adminblog.mhgoi.net/html
+cp dist/* /data/www/adminblog.mhgoi.net/html
 ```
