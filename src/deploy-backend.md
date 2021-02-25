@@ -35,7 +35,7 @@ java \
 -Djava.security.egd=file:/dev/./urandom \
 -Duser.timezone=Asia/Shanghai \
 -Djava.net.preferIPv4Stack=true \
--jar mhgoi_blog_api-1.0.0-SNAPSHOT.jar \
+-jar mhgoi-blog-api-1.0.0-SNAPSHOT.jar \
 --spring.config.name=application,override \
 --spring.config.location=classpath:/application.yml,file:///$(pwd)/override.yml \
 --spring.profiles.active=prod-mysql8 \
@@ -83,7 +83,7 @@ ExecStart=/usr/local/java/bin/java \
     -Djava.security.egd=file:/dev/./urandom \
     -Duser.timezone=Asia/Shanghai \
     -Djava.net.preferIPv4Stack=true \
-    -jar mhgoi_blog_api-1.0.0-SNAPSHOT.jar \
+    -jar mhgoi-blog-api-1.0.0-SNAPSHOT.jar \
     --spring.config.name=application,override \
     --spring.config.location=classpath:/application.yml,file:///data/mhgoi/override.yml \
     --spring.profiles.active=prod-mysql8 \
