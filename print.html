@@ -877,15 +877,15 @@ docker run -d --name artalkserverphp \
 <h1><a class="header" href="#部署前端admin" id="部署前端admin">部署前端admin</a></h1>
 <h2><a class="header" href="#编译" id="编译">编译</a></h2>
 <p>根据需要修改vue.config.js的publicPath</p>
-<pre><code class="language-json">publicPath: '/wp-admin',
+<pre><code class="language-json">publicPath: '/',
 </code></pre>
 <pre><code class="language-bash">cd mhgoi-blog/frontend/admin
 
 npm run build
 </code></pre>
 <h2><a class="header" href="#发布" id="发布">发布</a></h2>
-<pre><code class="language-bash">mkdir -p /usr/share/nginx/html/wp-admin
-cp dist/* /usr/share/nginx/html/wp-admin
+<pre><code class="language-bash">mkdir -p /data/www/adminblog.mhgoi.net/html
+cp dist/* /data/www/adminblog.mhgoi.net/html
 </code></pre>
 <h1><a class="header" href="#部署前端web" id="部署前端web">部署前端web</a></h1>
 <h2><a class="header" href="#编译-1" id="编译-1">编译</a></h2>
@@ -897,7 +897,8 @@ cp dist/* /usr/share/nginx/html/wp-admin
 npm run build
 </code></pre>
 <h2><a class="header" href="#发布-1" id="发布-1">发布</a></h2>
-<pre><code class="language-bash">cp dist/* /usr/share/nginx/html/
+<pre><code class="language-bash">mkdir -p /data/www/blog.mhgoi.net/html
+cp dist/* /data/www/blog.mhgoi.net/html
 </code></pre>
 <h1><a class="header" href="#安装nginx" id="安装nginx">安装nginx</a></h1>
 <blockquote>
@@ -955,7 +956,7 @@ server{
     charset UTF-8;
     location / {
         index index.html index.htm;
-        root /usr/share/nginx/html/;
+        root /data/www/blog.mhgoi.net/html;
         try_files $uri /index.html;
         if ($uri ~* ^.+\.(css|js|swf|png|woff|woff2|webp|svg|jgp)$) {
             access_log off;
