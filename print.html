@@ -171,10 +171,10 @@
 <img src="https://img.shields.io/badge/springboot-2.3.9.RELEASE-green">
 <img src="https://img.shields.io/badge/vue-%5E%3D2.6.11-blue" />
 <h1><a class="header" href="#项目仓库" id="项目仓库">项目仓库</a></h1>
-<p><a href="http://github.com/dyrnq/mhgoi-blog"><img src="./img/github-logo-1.png" alt="github" title="github" /></a></p>
-<p><a href="http://github.com/dyrnq/mhgoi-blog">http://github.com/dyrnq/mhgoi-blog</a></p>
-<p><a href="http://gitee.com/dyrnq/mhgoi-blog"><img src="./img/gitee.svg" alt="gitee" title="gitee" /></a></p>
-<p><a href="http://gitee.com/dyrnq/mhgoi-blog">http://gitee.com/dyrnq/mhgoi-blog</a></p>
+<p><a href="https://github.com/dyrnq/mhgoi-blog"><img src="./img/github-logo-1.png" alt="github" title="github" /></a></p>
+<p><a href="https://github.com/dyrnq/mhgoi-blog">http://github.com/dyrnq/mhgoi-blog</a></p>
+<p><a href="https://gitee.com/dyrnq/mhgoi-blog"><img src="./img/gitee.svg" alt="gitee" title="gitee" /></a></p>
+<p><a href="https://gitee.com/dyrnq/mhgoi-blog">http://gitee.com/dyrnq/mhgoi-blog</a></p>
 <h1><a class="header" href="#软件特色" id="软件特色">软件特色</a></h1>
 <ul>
 <li>多数据库支持,支持mysql、mariadb、postgresql</li>
@@ -544,7 +544,7 @@ docker run -d --name postgres13 \
 --network mynet \
 -e POSTGRES_PASSWORD=666666 \
 -p 5432:5432 \
--v /data/lib/postgres13:/var/lib/postgresql/data postgres:13.1
+-v /data/lib/postgres13:/var/lib/postgresql/data postgres:13.2
 </code></pre>
 <h2><a class="header" href="#cockroachdb" id="cockroachdb">cockroachdb</a></h2>
 <p>CockroachDB兼容PostgreSQL协议</p>
@@ -606,8 +606,14 @@ nodeID:              1
 cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs
 CREATE DATABASE mhgoi_blog;
 CREATE USER jack WITH PASSWORD '666666';
-GRANT ALL ON DATABASE mhgoi_blog TO jack;
-GRANT ALL ON TABLE mhgoi_blog.public.* TO jack;
+</code></pre>
+<p>导入数据，文件目录存放在容器的<code>/cockroach/cockroach-data/extern/</code>目录</p>
+<pre><code class="language-bash">cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs -e &quot;use mhgoi_blog; IMPORT MYSQLDUMP ('nodelocal://self/mysql_dump.sql');&quot;
+# or
+cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs -e &quot;use mhgoi_blog; IMPORT PGDUMP ('nodelocal://self/postgres_dump.sql');&quot;
+</code></pre>
+<pre><code class="language-bash">cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs -e &quot;GRANT ALL ON DATABASE mhgoi_blog TO jack;&quot;
+cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs -e &quot;GRANT ALL ON TABLE mhgoi_blog.public.* TO jack;&quot;
 </code></pre>
 <h1><a class="header" href="#redis" id="redis">redis</a></h1>
 <p>redis我们使用<code>docker run</code>快速安装</p>
@@ -636,6 +642,16 @@ CREATE USER 'jack'@'%' IDENTIFIED BY '666666';
 GRANT ALL PRIVILEGES ON *.* TO 'jack'@'%';
 FLUSH PRIVILEGES;
 </code></pre>
+<table><thead><tr><th>database-version</th><th>remark</th><th>sql</th></tr></thead><tbody>
+<tr><td>mysql5.7</td><td>only schema</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/mysql/mysql-schema-mysql57.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/mysql/mysql-schema-mysql57.sql</a></td></tr>
+<tr><td>mysql5.7</td><td>only data</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/mysql/mysql-data-mysql57.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/mysql/mysql-data-mysql57.sql</a></td></tr>
+<tr><td>mysql5.7</td><td>scheme and data</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/mysql/mysql-mysql57.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/mysql/mysql-mysql57.sql</a></td></tr>
+</tbody></table>
+<table><thead><tr><th>database-version</th><th>remark</th><th>sql</th></tr></thead><tbody>
+<tr><td>mysql8</td><td>only schema</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/mysql/mysql-schema-mysql8.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/mysql/mysql-schema-mysql8.sql</a></td></tr>
+<tr><td>mysql8</td><td>only data</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/mysql/mysql-data-mysql8.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/mysql/mysql-data-mysql8.sql</a></td></tr>
+<tr><td>mysql8</td><td>scheme and data</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/mysql/mysql-mysql8.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/mysql/mysql-mysql8.sql</a></td></tr>
+</tbody></table>
 <h1><a class="header" href="#创建数据库-1" id="创建数据库-1">创建数据库</a></h1>
 <pre><code class="language-sql">-- create database
 create database mhgoi_blog with encoding='utf8';
@@ -654,6 +670,16 @@ GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public to jack;
 GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public to jack;
 
 </code></pre>
+<table><thead><tr><th>database-version</th><th>remark</th><th>sql</th></tr></thead><tbody>
+<tr><td>postgres11</td><td>only schema</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-schema-pg11.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-schema-pg11.sql</a></td></tr>
+<tr><td>postgres11</td><td>only data</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-data-pg11.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-data-pg11.sql</a></td></tr>
+<tr><td>postgres11</td><td>scheme and data</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-pg11.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-pg11.sql</a></td></tr>
+</tbody></table>
+<table><thead><tr><th>database-version</th><th>remark</th><th>sql</th></tr></thead><tbody>
+<tr><td>postgres12</td><td>only schema</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-schema-pg12.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-schema-pg12.sql</a></td></tr>
+<tr><td>postgres12</td><td>only data</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-data-pg12.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-data-pg12.sql</a></td></tr>
+<tr><td>postgres12</td><td>scheme and data</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-pg12.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-pg12.sql</a></td></tr>
+</tbody></table>
 <h1><a class="header" href="#下载代码" id="下载代码">下载代码</a></h1>
 <pre><code class="language-bash">git clone http://github.com/dyrnq/mhgoi-blog
 </code></pre>

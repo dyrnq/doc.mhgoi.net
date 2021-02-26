@@ -223,8 +223,14 @@ nodeID:              1
 cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs
 CREATE DATABASE mhgoi_blog;
 CREATE USER jack WITH PASSWORD '666666';
-GRANT ALL ON DATABASE mhgoi_blog TO jack;
-GRANT ALL ON TABLE mhgoi_blog.public.* TO jack;
+</code></pre>
+<p>导入数据，文件目录存放在容器的<code>/cockroach/cockroach-data/extern/</code>目录</p>
+<pre><code class="language-bash">cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs -e &quot;use mhgoi_blog; IMPORT MYSQLDUMP ('nodelocal://self/mysql_dump.sql');&quot;
+# or
+cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs -e &quot;use mhgoi_blog; IMPORT PGDUMP ('nodelocal://self/postgres_dump.sql');&quot;
+</code></pre>
+<pre><code class="language-bash">cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs -e &quot;GRANT ALL ON DATABASE mhgoi_blog TO jack;&quot;
+cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs -e &quot;GRANT ALL ON TABLE mhgoi_blog.public.* TO jack;&quot;
 </code></pre>
 
                     </main>
