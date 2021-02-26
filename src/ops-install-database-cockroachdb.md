@@ -70,7 +70,16 @@ docker exec -it cockroach bash
 cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs
 CREATE DATABASE mhgoi_blog;
 CREATE USER jack WITH PASSWORD '666666';
-GRANT ALL ON DATABASE mhgoi_blog TO jack;
-GRANT ALL ON TABLE mhgoi_blog.public.* TO jack;
+```
+导入数据，文件目录存放在容器的`/cockroach/cockroach-data/extern/`目录
+
+```bash
+cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs -e "use mhgoi_blog; IMPORT MYSQLDUMP ('nodelocal://self/mysql_dump.sql');"
+# or
+cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs -e "use mhgoi_blog; IMPORT PGDUMP ('nodelocal://self/postgres_dump.sql');"
 ```
 
+```bash
+cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs -e "GRANT ALL ON DATABASE mhgoi_blog TO jack;"
+cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs -e "GRANT ALL ON TABLE mhgoi_blog.public.* TO jack;"
+```

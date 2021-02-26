@@ -34,6 +34,6 @@ docker run -d --name postgres13 \
 --network mynet \
 -e POSTGRES_PASSWORD=666666 \
 -p 5432:5432 \
--v /data/lib/postgres13:/var/lib/postgresql/data postgres:13.1
+-v /data/lib/postgres13:/var/lib/postgresql/data postgres:13.2
 ```
 
