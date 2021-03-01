@@ -160,12 +160,12 @@ journalctl -k --no-pager |grep -Ei "oom|kill|error|java"
 
 
 ## ref
-* https://visualvm.github.io/download.html
+* <https://visualvm.github.io/download.html>
 * [https://github.com/fabric8io-images/run-java-sh](https://github.com/fabric8io-images/run-java-sh)
-* https://github.com/bcicen/ctop/releases/download/v0.7.5/ctop-0.7.5-linux-amd64
-* https://dzone.com/articles/jvm-tuning-using-jcmd
-* https://foojay.io/command-line-arguments/openjdk-11/?tab=alloptions
-* https://chriswhocodes.com/hotspot_options_openjdk11.html
-* https://www.google.com/search?q=JVM+Diagnostics
-* https://www.google.com/search?q=JVM+Performance+Tuning
-* https://www.google.com/search?q=Java+Optimization
+* <https://github.com/bcicen/ctop/releases/download/v0.7.5/ctop-0.7.5-linux-amd64>
+* <https://dzone.com/articles/jvm-tuning-using-jcmd>
+* <https://foojay.io/command-line-arguments/openjdk-11/?tab=alloptions>
+* <https://chriswhocodes.com/hotspot_options_openjdk11.html>
+* <https://www.google.com/search?q=JVM+Diagnostics>
+* <https://www.google.com/search?q=JVM+Performance+Tuning>
+* <https://www.google.com/search?q=Java+Optimization>
