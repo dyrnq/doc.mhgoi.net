@@ -1,3 +1,5 @@
+# Nginx部署
+
 ## 安装nginx
 
 > 参考  [http://nginx.org/en/docs/install.html](http://nginx.org/en/docs/install.html)

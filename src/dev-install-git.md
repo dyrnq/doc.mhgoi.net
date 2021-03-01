@@ -1,4 +1,6 @@
-## 安装git
+# Git
+
+## git
 
 
 ```bash
@@ -13,11 +15,11 @@ yum install git
 ```
 
 
-## 安装GithubDesktop
+## GithubDesktop
 
 [https://desktop.github.com/](https://desktop.github.com/)
 
 
-## 安装Github cli(可选)
+## Github cli(可选)
 
 [https://github.com/cli/cli](https://github.com/cli/cli)

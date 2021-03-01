@@ -1,4 +1,6 @@
-## 评论组件
+# Artalk评论组件
+
+## Artalk简介
 
 > 评论组件基于[https://github.com/ArtalkJS/Artalk](https://github.com/ArtalkJS/Artalk)
 
