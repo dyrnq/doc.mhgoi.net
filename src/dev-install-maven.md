@@ -1,9 +1,11 @@
 # maven下载
 
 ## 下载
-从[https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/](https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/)下载个maven包，比如[https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz](https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz)
+从[https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/](https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/)下载个maven包。
 
-下载解压后设置MAVEN_HOME和PATH
+[https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz](https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz)
+
+下载解压后设置MAVEN_HOME环境变量和PATH环境变量中追加$MAVEN_HOME/bin
 
 ```bash
 jim@debian:~$ mvn -version

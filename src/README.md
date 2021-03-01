@@ -14,10 +14,10 @@
 
 [![github](./img/github-logo-1.png "github")](https://github.com/dyrnq/mhgoi-blog)
 
-[http://github.com/dyrnq/mhgoi-blog](https://github.com/dyrnq/mhgoi-blog)
+[https://github.com/dyrnq/mhgoi-blog](https://github.com/dyrnq/mhgoi-blog)
 
 [![gitee](./img/gitee.svg "gitee")](https://gitee.com/dyrnq/mhgoi-blog)
 
-[http://gitee.com/dyrnq/mhgoi-blog](https://gitee.com/dyrnq/mhgoi-blog)
+[https://gitee.com/dyrnq/mhgoi-blog](https://gitee.com/dyrnq/mhgoi-blog)
 
 

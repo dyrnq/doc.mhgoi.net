@@ -13,6 +13,7 @@
     - [Nodejs](./dev-install-nodejs.md)
     - [Virtualbox](./dev-install-virtualbox.md)
     - [Vagrant](./dev-install-vagrant.md)
+    - [虚机网络设置](./dev-vm-natnetwork-config.md)
   - [服务端软件](./ops-install-server.md)
     - [Docker](./ops-install-docker.md)
     - [数据库](./ops-install-database.md)
