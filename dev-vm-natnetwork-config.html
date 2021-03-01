@@ -163,7 +163,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#vm-nat网络配置" id="vm-nat网络配置">vm-nat网络配置</a></h1>
+                        <h2><a class="header" href="#vm-nat网络配置" id="vm-nat网络配置">vm-nat网络配置</a></h2>
 <p>在使用vm作为开发测试机的时候首先碰到的问题，就是部署在虚拟机里的服务，比如mysql，怎样在host主机访问呢？</p>
 <p>首先整理下概念</p>
 <ul>
@@ -181,7 +181,7 @@
 </tbody></table>
 <p>这样在宿主机上通过<code>ssh tom@127.0.0.1 -p 18222</code> 这条命令就连到虚拟机的ssh了。</p>
 <p>以此类推，其他3306、6379等端口也可以从虚拟机映射到宿主机，如果宿主机已经占用了端口那么就改个未被占用的端口，自行记录对应关系。</p>
-<h1><a class="header" href="#docker容器端口映射" id="docker容器端口映射">docker容器端口映射</a></h1>
+<h2><a class="header" href="#docker容器端口映射" id="docker容器端口映射">docker容器端口映射</a></h2>
 <p>以此类推，如果在vm中起docker容器，首先要把容器的端口映射出来。</p>
 <pre><code class="language-bash">docker run -d --name mysql57 --restart always -p 3306:3306 mysql:5.7.32
 </code></pre>
