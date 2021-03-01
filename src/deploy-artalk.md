@@ -1,4 +1,4 @@
-# 评论组件
+## 评论组件
 
 > 评论组件基于[https://github.com/ArtalkJS/Artalk](https://github.com/ArtalkJS/Artalk)
 
@@ -19,7 +19,7 @@ docker run -d --name artalkserverphp \
 -p 23366:23366 dyrnq/artalkserverphp
 ```
 
-# 参考
+## 参考
 * [https://github.com/ArtalkJS/Artalk](https://github.com/ArtalkJS/Artalk)
 * [https://github.com/ArtalkJS/Artalk-API-PHP](https://github.com/ArtalkJS/Artalk-API-PHP)
 * [https://github.com/dyrnq/docker-ArtalkServerPhp](https://github.com/dyrnq/docker-ArtalkServerPhp)

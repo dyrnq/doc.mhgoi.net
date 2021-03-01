@@ -1,6 +1,6 @@
 
 
-# AdoptOpenJDK下载
+# AdoptOpenJDK
 
 
 

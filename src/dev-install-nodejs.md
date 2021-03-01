@@ -1,4 +1,4 @@
-# 下载nodejs
+## 下载nodejs
 
 从[https://nodejs.org/](https://nodejs.org/)下载nodejs
 
@@ -14,14 +14,14 @@ jim@debian:~$ npm --version
 6.14.10
 ```
 
-# 设置npm的mirror
+## 设置npm的mirror
 
 ```bash
 npm config set registry https://mirrors.huaweicloud.com/repository/npm/
 npm cache clean -f
 ```
 
-# 其他方式安装
+## 其他方式安装
 
 - [https://sdkman.io/](https://sdkman.io/)
 - [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)

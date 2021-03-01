@@ -1,18 +1,18 @@
-# 安装nginx
+## 安装nginx
 
 > 参考  [http://nginx.org/en/docs/install.html](http://nginx.org/en/docs/install.html)
 
-## debian
+### debian
 ```bash
 apt install nginx
 ```
 
-## centos
+### centos
 ```bash
 yum install nginx
 ```
 
-# 配置nginx
+## 配置nginx
 
 ```conf
 

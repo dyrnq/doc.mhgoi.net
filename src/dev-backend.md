@@ -1,22 +1,22 @@
 
-# 下载代码
+## 下载代码
 ```bash
 git clone http://github.com/dyrnq/mhgoi-blog
 ```
 
 
-# Eclipse导入项目
+## Eclipse导入项目
 
 ![import](img/import.png)
 
 
-# 运行
+## 运行
 
-## 选择一main函数启动
+### 选择一main函数启动
 main函数运行`net.mhgoi.blog.MainApplication.java`
 
 
-## 选择二mvnw启动
+### 选择二mvnw启动
 
 ```bash
 cd mhgoi-blog/backend
@@ -30,7 +30,7 @@ cd mhgoi-blog/backend/api
 ```
 
 
-## 选择三maven启动
+### 选择三maven启动
 
 ```bash
 cd mhgoi-blog/backend/api
@@ -38,7 +38,7 @@ mvn spring-boot:run
 ```
 
 
-# 打包
+## 打包
 
 
 ```bash
