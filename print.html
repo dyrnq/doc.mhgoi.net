@@ -290,6 +290,7 @@ OS name: &quot;linux&quot;, version: &quot;4.19.0-13-amd64&quot;, arch: &quot;am
   --&gt;
 &lt;localRepository&gt;/usr/local/maven_repo&lt;/localRepository&gt;
 </code></pre>
+<h1><a class="header" href="#eclipse" id="eclipse">Eclipse</a></h1>
 <h2><a class="header" href="#下载eclipse" id="下载eclipse">下载Eclipse</a></h2>
 <p>从<a href="https://www.eclipse.org/downloads/packages/">https://www.eclipse.org/downloads/packages/</a>下载<code>Eclipse IDE for Java Developers</code></p>
 <p><img src="./img/download-eclipse.png" alt="download-eclipse" /></p>
@@ -303,12 +304,14 @@ OS name: &quot;linux&quot;, version: &quot;4.19.0-13-amd64&quot;, arch: &quot;am
 <h2><a class="header" href="#配置maven" id="配置maven">配置maven</a></h2>
 <p>这一步是统一命令行(shell)中使用mvn和Eclipse中maven使用相同的设置</p>
 <p><img src="./img/eclipse-maven.png" alt="eclipse-maven" /></p>
+<h1><a class="header" href="#vscode" id="vscode">VSCode</a></h1>
 <h2><a class="header" href="#下载vscode" id="下载vscode">下载VSCode</a></h2>
 <p>Visual Studio Code是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于Windows，macOS和Linux。</p>
 <p><a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
 <h2><a class="header" href="#推荐插件" id="推荐插件">推荐插件</a></h2>
 <p>Beautify、Docker、Vetur</p>
-<h2><a class="header" href="#安装git" id="安装git">安装git</a></h2>
+<h1><a class="header" href="#git" id="git">Git</a></h1>
+<h2><a class="header" href="#git-1" id="git-1">git</a></h2>
 <pre><code class="language-bash"># debian ubuntu
 apt install git
 
@@ -318,10 +321,11 @@ yum install git
 # mac
 # https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git
 </code></pre>
-<h2><a class="header" href="#安装githubdesktop" id="安装githubdesktop">安装GithubDesktop</a></h2>
+<h2><a class="header" href="#githubdesktop" id="githubdesktop">GithubDesktop</a></h2>
 <p><a href="https://desktop.github.com/">https://desktop.github.com/</a></p>
-<h2><a class="header" href="#安装github-cli可选" id="安装github-cli可选">安装Github cli(可选)</a></h2>
+<h2><a class="header" href="#github-cli可选" id="github-cli可选">Github cli(可选)</a></h2>
 <p><a href="https://github.com/cli/cli">https://github.com/cli/cli</a></p>
+<h1><a class="header" href="#nodejs" id="nodejs">nodejs</a></h1>
 <h2><a class="header" href="#下载nodejs" id="下载nodejs">下载nodejs</a></h2>
 <p>从<a href="https://nodejs.org/">https://nodejs.org/</a>下载nodejs</p>
 <p><img src="img/install-nodejs.png" alt="install-nodejs" /></p>
@@ -477,7 +481,8 @@ vagrant ssh n11
 <li><a href="https://blog.dteam.top/posts/2020-04/vagrant-use-mirror.html">Vagrant使用国内镜像安装插件和box镜像</a></li>
 <li><a href="https://blog.centos.org/2020/05/updated-centos-vagrant-images-available-v2004-01/">Updated CentOS Vagrant Images Available (v2004.01)</a></li>
 </ul>
-<h2><a class="header" href="#vm-nat网络配置" id="vm-nat网络配置">vm-nat网络配置</a></h2>
+<h1><a class="header" href="#vm-nat网络配置" id="vm-nat网络配置">vm-nat网络配置</a></h1>
+<h2><a class="header" href="#虚拟机端口映射" id="虚拟机端口映射">虚拟机端口映射</a></h2>
 <p>在使用vm作为开发测试机的时候首先碰到的问题，就是部署在虚拟机里的服务，比如mysql，怎样在host主机访问呢？</p>
 <p>首先整理下概念</p>
 <ul>
@@ -532,6 +537,7 @@ vagrant ssh n11
 <li><a href="ops-install-database-postgresql.html">postgresql</a></li>
 <li><a href="ops-install-database-cockroachdb.html">cockroachdb</a></li>
 </ul>
+<h1><a class="header" href="#mysql" id="mysql">mysql</a></h1>
 <h2><a class="header" href="#mysql-57x" id="mysql-57x">mysql-5.7.x</a></h2>
 <pre><code class="language-bash">mkdir -p /data/lib/mysql57;
 docker run -d --name mysql57 \
@@ -552,6 +558,7 @@ docker run -d --name mysql8 \
 -p 13306:3306 \
 mysql:8.0.23 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-time-zone=+8:00 --innodb-dedicated-server=on
 </code></pre>
+<h1><a class="header" href="#mariadb" id="mariadb">mariadb</a></h1>
 <h2><a class="header" href="#mariadb-105x" id="mariadb-105x">mariadb-10.5.x</a></h2>
 <pre><code class="language-bash">mkdir -p /data/lib/mariadb10;
 docker run -d --name mariadb10 \
@@ -562,6 +569,7 @@ docker run -d --name mariadb10 \
 -p 3306:3306 \
 mariadb:10.5.8
 </code></pre>
+<h1><a class="header" href="#postgresql" id="postgresql">postgresql</a></h1>
 <h2><a class="header" href="#postgresql-11x" id="postgresql-11x">postgresql-11.x</a></h2>
 <pre><code class="language-bash">mkdir -p /data/lib/postgres11;
 docker run -d --name postgres11 \
@@ -589,7 +597,7 @@ docker run -d --name postgres13 \
 -p 5432:5432 \
 -v /data/lib/postgres13:/var/lib/postgresql/data postgres:13.2
 </code></pre>
-<h2><a class="header" href="#cockroachdb" id="cockroachdb">cockroachdb</a></h2>
+<h1><a class="header" href="#cockroachdb" id="cockroachdb">cockroachdb</a></h1>
 <p>CockroachDB兼容PostgreSQL协议</p>
 <pre><code class="language-bash">mkdir -p /data/lib/cockroach/data;
 mkdir -p /data/lib/cockroach/certs;
@@ -723,6 +731,7 @@ GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public to jack;
 <tr><td>postgres12</td><td>only data</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-data-pg12.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-data-pg12.sql</a></td></tr>
 <tr><td>postgres12</td><td>scheme and data</td><td><a href="https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-pg12.sql">https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-pg12.sql</a></td></tr>
 </tbody></table>
+<h1><a class="header" href="#后端代码" id="后端代码">后端代码</a></h1>
 <h2><a class="header" href="#下载代码" id="下载代码">下载代码</a></h2>
 <pre><code class="language-bash">git clone http://github.com/dyrnq/mhgoi-blog
 </code></pre>
@@ -750,6 +759,7 @@ mvn spring-boot:run
 <pre><code class="language-bash">mkdir -p ~/.m2/
 ln -s ${MAVEN_HOME}/conf/settings.xml ~/.m2/settings.xml
 </code></pre>
+<h1><a class="header" href="#前端代码admin" id="前端代码admin">前端代码admin</a></h1>
 <h2><a class="header" href="#下载代码-1" id="下载代码-1">下载代码</a></h2>
 <pre><code class="language-bash">git clone http://github.com/dyrnq/mhgoi-blog
 </code></pre>
@@ -762,6 +772,7 @@ npm run dev
 <h2><a class="header" href="#build" id="build">build</a></h2>
 <pre><code class="language-bash">npm run build
 </code></pre>
+<h1><a class="header" href="#前端代码web" id="前端代码web">前端代码web</a></h1>
 <h2><a class="header" href="#下载代码-2" id="下载代码-2">下载代码</a></h2>
 <pre><code class="language-bash">git clone http://github.com/dyrnq/mhgoi-blog
 </code></pre>
@@ -775,7 +786,8 @@ npm run dev
 <pre><code class="language-bash">npm run build
 </code></pre>
 <h1><a class="header" href="#部署" id="部署">部署</a></h1>
-<h2><a class="header" href="#部署后端" id="部署后端">部署后端</a></h2>
+<h1><a class="header" href="#部署后端" id="部署后端">部署后端</a></h1>
+<h2><a class="header" href="#编译" id="编译">编译</a></h2>
 <pre><code class="language-bash">cd mhgoi-blog/backend/api
 mvn spring-boot:run
 </code></pre>
@@ -920,7 +932,8 @@ journalctl -k --no-pager |grep -Ei &quot;oom|kill|error|java&quot;
 <li>https://www.google.com/search?q=JVM+Performance+Tuning</li>
 <li>https://www.google.com/search?q=Java+Optimization</li>
 </ul>
-<h2><a class="header" href="#评论组件" id="评论组件">评论组件</a></h2>
+<h1><a class="header" href="#artalk评论组件" id="artalk评论组件">Artalk评论组件</a></h1>
+<h2><a class="header" href="#artalk简介" id="artalk简介">Artalk简介</a></h2>
 <blockquote>
 <p>评论组件基于<a href="https://github.com/ArtalkJS/Artalk">https://github.com/ArtalkJS/Artalk</a></p>
 </blockquote>
@@ -944,7 +957,7 @@ docker run -d --name artalkserverphp \
 <li><a href="https://github.com/dyrnq/docker-ArtalkServerPhp">https://github.com/dyrnq/docker-ArtalkServerPhp</a></li>
 </ul>
 <h1><a class="header" href="#部署前端admin" id="部署前端admin">部署前端admin</a></h1>
-<h2><a class="header" href="#编译" id="编译">编译</a></h2>
+<h2><a class="header" href="#编译-1" id="编译-1">编译</a></h2>
 <p>根据需要修改vue.config.js的publicPath</p>
 <pre><code class="language-json">publicPath: '/',
 </code></pre>
@@ -957,7 +970,7 @@ npm run build
 cp dist/* /data/www/adminblog.mhgoi.net/html
 </code></pre>
 <h1><a class="header" href="#部署前端web" id="部署前端web">部署前端web</a></h1>
-<h2><a class="header" href="#编译-1" id="编译-1">编译</a></h2>
+<h2><a class="header" href="#编译-2" id="编译-2">编译</a></h2>
 <p>根据需要修改vue.config.js的publicPath</p>
 <pre><code class="language-json">publicPath: '/',
 </code></pre>
@@ -969,6 +982,7 @@ npm run build
 <pre><code class="language-bash">mkdir -p /data/www/blog.mhgoi.net/html
 cp dist/* /data/www/blog.mhgoi.net/html
 </code></pre>
+<h1><a class="header" href="#nginx部署" id="nginx部署">Nginx部署</a></h1>
 <h2><a class="header" href="#安装nginx" id="安装nginx">安装nginx</a></h2>
 <blockquote>
 <p>参考  <a href="http://nginx.org/en/docs/install.html">http://nginx.org/en/docs/install.html</a></p>
@@ -1099,7 +1113,7 @@ upstream artalkserverphp {
 <tr><td>奇文社区</td><td>奇文网盘</td><td>https://gitee.com/qiwen-cloud/qiwen-file</td></tr>
 <tr><td>weilanwl</td><td>ColorUI</td><td>https://github.com/weilanwl/ColorUI</td></tr>
 </tbody></table>
-<h2><a class="header" href="#关注交流" id="关注交流">关注&amp;交流</a></h2>
+<h1><a class="header" href="#关注交流" id="关注交流">关注&amp;交流</a></h1>
 <p>为了方便小伙伴们沟通交流，我创建了QQ群792063225 (<strong>加群备注</strong>： <code>唔该博客</code> )，目前项目还存在很多不足之处，欢迎各位老哥进群进行技术交流，谢谢~</p>
 <p><img src="./img/1611219654149.png" alt="qq" /></p>
 <h2><a class="header" href="#贡献代码" id="贡献代码">贡献代码</a></h2>
