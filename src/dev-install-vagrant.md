@@ -4,7 +4,7 @@
 
 Vagrant可以理解为针对虚拟机的`docker`，可以方便拉取别人制作好的虚机镜像后启动一个虚拟机实例。
 
-通常我们可以不用自己安装虚机，可以像`docker pull`一样从Vagrant的app仓库拉取操作系统官方制作好的box（镜像），ubuntu和centos都有官方自己制作的镜像。
+通常可以不用自己安装虚机，可以像`docker pull`一样从Vagrant的app仓库拉取操作系统官方制作好的box（镜像），ubuntu和centos都有官方自己制作的镜像。
 
 Vagrant不仅可以操控virtualbox，还可以操控vmware等其他虚拟化方案。
 
@@ -25,7 +25,7 @@ brew cask install vagrant
 
 为本地仓库添加box方法有2种，box是vagrant的镜像。
 
-* 一种是先使用curl或者wget等工具下载镜像，再添加。
+* 第一种方法是先使用curl或者wget等工具下载镜像，再添加。<font color=red size=3>推荐</font>
 
 
 ```bash
@@ -35,7 +35,7 @@ wget --tries 100 --continue --output-document debian10.box  https://app.vagrantu
 vagrant box add debian10 ./debian10.box
 ```
 
-* 另外可以通过`vagrant box add` 命令后边+box的http地址。
+* 第二种方法可以通过`vagrant box add` 命令后边+box的http地址。
 
 ```bash
 # debian buster64
@@ -137,7 +137,7 @@ vagrant up n11
 vagrant ssh n11
 ```
 
-<font color=red size=3>使用Vagrant的好处是可以快速的重新获取一个全新的既定的vm</font>，比如我用下边这条语句
+<font color=red size=3>使用Vagrant的好处是可以快速的重新获取一个全新的既定的vm</font>，比如用下边这条语句
 
 ```bash
 vagrant destroy n11 -f && vagrant up n11 && vagrant ssh n11 

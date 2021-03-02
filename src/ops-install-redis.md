@@ -2,7 +2,7 @@
 
 # redis
 
-redis我们使用`docker run`快速安装
+redis使用`docker run`快速安装
 
 
 ```bash

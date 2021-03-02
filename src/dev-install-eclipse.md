@@ -18,7 +18,7 @@ java -jar lombok.jar
 ```
 ![install-lombok](./img/install-lombok.png)
 
-如果提示`Can't find IDE`,我们需要选择手工选择Eclipse的安装路径(上图的Specify location)，再点击install！
+如果提示`Can't find IDE`,则需要选择手工选择Eclipse的安装路径(上图的Specify location)，再点击install！
 
 ## 配置maven
 

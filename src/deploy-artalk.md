@@ -4,7 +4,7 @@
 
 > 评论组件基于[https://github.com/ArtalkJS/Artalk](https://github.com/ArtalkJS/Artalk)
 
-我们需要部署他的服务端[https://github.com/ArtalkJS/Artalk-API-PHP](https://github.com/ArtalkJS/Artalk-API-PHP)
+需要部署他的服务端[https://github.com/ArtalkJS/Artalk-API-PHP](https://github.com/ArtalkJS/Artalk-API-PHP)
 
 
 ```bash

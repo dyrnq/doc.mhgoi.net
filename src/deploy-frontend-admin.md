@@ -1,11 +1,7 @@
 # 部署前端admin
 
 ## 编译
-根据需要修改vue.config.js的publicPath
 
-```json
-publicPath: '/',
-```
 
 ```bash
 cd mhgoi-blog/frontend/admin
