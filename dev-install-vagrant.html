@@ -165,7 +165,7 @@
                     <main>
                         <h1><a class="header" href="#vagrant" id="vagrant">Vagrant</a></h1>
 <p>Vagrant可以理解为针对虚拟机的<code>docker</code>，可以方便拉取别人制作好的虚机镜像后启动一个虚拟机实例。</p>
-<p>通常我们可以不用自己安装虚机，可以像<code>docker pull</code>一样从Vagrant的app仓库拉取操作系统官方制作好的box（镜像），ubuntu和centos都有官方自己制作的镜像。</p>
+<p>通常可以不用自己安装虚机，可以像<code>docker pull</code>一样从Vagrant的app仓库拉取操作系统官方制作好的box（镜像），ubuntu和centos都有官方自己制作的镜像。</p>
 <p>Vagrant不仅可以操控virtualbox，还可以操控vmware等其他虚拟化方案。</p>
 <h2><a class="header" href="#install" id="install">install</a></h2>
 <p>文档 <a href="https://www.vagrantup.com/downloads">https://www.vagrantup.com/downloads</a></p>
@@ -175,7 +175,7 @@
 <h2><a class="header" href="#下载vbox镜像" id="下载vbox镜像">下载vbox镜像</a></h2>
 <p>为本地仓库添加box方法有2种，box是vagrant的镜像。</p>
 <ul>
-<li>一种是先使用curl或者wget等工具下载镜像，再添加。</li>
+<li>第一种方法是先使用curl或者wget等工具下载镜像，再添加。<font color=red size=3>推荐</font></li>
 </ul>
 <pre><code class="language-bash">## .box文件比较大，也可以下载下来，再调用vagrant box add
 wget --tries 100 --continue --output-document debian10.box  https://app.vagrantup.com/debian/boxes/buster64/versions/10.4.0/providers/virtualbox.box
@@ -183,7 +183,7 @@ wget --tries 100 --continue --output-document debian10.box  https://app.vagrantu
 vagrant box add debian10 ./debian10.box
 </code></pre>
 <ul>
-<li>另外可以通过<code>vagrant box add</code> 命令后边+box的http地址。</li>
+<li>第二种方法可以通过<code>vagrant box add</code> 命令后边+box的http地址。</li>
 </ul>
 <pre><code class="language-bash"># debian buster64
 vagrant box add debian10 https://app.vagrantup.com/debian/boxes/buster64/versions/10.4.0/providers/virtualbox.box
@@ -276,7 +276,7 @@ end
 <pre><code class="language-bash">vagrant up n11
 vagrant ssh n11
 </code></pre>
-<p><font color=red size=3>使用Vagrant的好处是可以快速的重新获取一个全新的既定的vm</font>，比如我用下边这条语句</p>
+<p><font color=red size=3>使用Vagrant的好处是可以快速的重新获取一个全新的既定的vm</font>，比如用下边这条语句</p>
 <pre><code class="language-bash">vagrant destroy n11 -f &amp;&amp; vagrant up n11 &amp;&amp; vagrant ssh n11 
 </code></pre>
 <p>表示强制销毁n11----&gt;重新建立n11----&gt;ssh登录到n11</p>

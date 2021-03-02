@@ -176,11 +176,11 @@
 <p><img src="./img/vm-network1.png" alt="vm-network1" /></p>
 <p><img src="./img/vm-network2.png" alt="vm-network2" /></p>
 <p>其中每一行是一个端口映射，主机IP固定写0.0.0.0，子系统IP不用写。主机端口写映射到主机的端口，子系统端口写虚机要映射出来的端口。</p>
-<p>比如要映射虚拟机的22端口到宿主机，这里由于宿主机的22端口被宿主机的sshd占用了，所以这里不能再用22端口映射，所以改成了18222</p>
-<table><thead><tr><th>主机IP</th><th>主机IP</th><th>子系统IP</th><th>子系统端口</th></tr></thead><tbody>
-<tr><td>0.0.0.0</td><td>18222</td><td></td><td>22</td></tr>
+<p>比如要映射虚拟机的22端口到宿主机，这里由于宿主机的22端口被宿主机的sshd占用了，所以这里不能再用22端口映射，所以改成了28222</p>
+<table><thead><tr><th>名称</th><th>协议</th><th>主机IP</th><th>主机端口</th><th>子系统IP</th><th>子系统端口</th></tr></thead><tbody>
+<tr><td>Rule1</td><td>TCP</td><td>0.0.0.0</td><td>28222</td><td></td><td>22</td></tr>
 </tbody></table>
-<p>这样在宿主机上通过<code>ssh tom@127.0.0.1 -p 18222</code> 这条命令就连到虚拟机的ssh了。</p>
+<p>这样在宿主机上通过<code>ssh tom@127.0.0.1 -p 28222</code> 这条命令就连到虚拟机的ssh了。</p>
 <p>以此类推，其他3306、6379等端口也可以从虚拟机映射到宿主机，如果宿主机已经占用了端口那么就改个未被占用的端口，自行记录对应关系。</p>
 <h2><a class="header" href="#docker容器端口映射" id="docker容器端口映射">docker容器端口映射</a></h2>
 <p>以此类推，如果在vm中起docker容器，首先要把容器的端口映射出来。</p>
