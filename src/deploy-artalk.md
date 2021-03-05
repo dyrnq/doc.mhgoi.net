@@ -6,7 +6,6 @@
 
 需要部署他的服务端[https://github.com/ArtalkJS/Artalk-API-PHP](https://github.com/ArtalkJS/Artalk-API-PHP)
 
-
 ```bash
 # https://github.com/ArtalkJS/Artalk-API-PHP/blob/master/Config.example.php
 wget --no-check-certificate --output-file Config.php https://raw.githubusercontent.com/ArtalkJS/Artalk-API-PHP/master/Config.example.php
@@ -22,6 +21,7 @@ docker run -d --name artalkserverphp \
 ```
 
 ## 参考
+
 * [https://github.com/ArtalkJS/Artalk](https://github.com/ArtalkJS/Artalk)
 * [https://github.com/ArtalkJS/Artalk-API-PHP](https://github.com/ArtalkJS/Artalk-API-PHP)
 * [https://github.com/dyrnq/docker-ArtalkServerPhp](https://github.com/dyrnq/docker-ArtalkServerPhp)

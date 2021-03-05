@@ -1,5 +1,3 @@
-
-
 # Vagrant
 
 Vagrant可以理解为针对虚拟机的`docker`，可以方便拉取别人制作好的虚拟机镜像后启动一个虚拟机实例。
@@ -12,9 +10,7 @@ Vagrant不仅可以操控virtualbox，还可以操控vmware、libvirt、hyperv�
 
 文档 <https://www.vagrantup.com/downloads>
 
-
 mac下安装Vagrant可以通过brew安装
-
 
 ```bash
 brew cask install vagrant
@@ -22,11 +18,9 @@ brew cask install vagrant
 
 ## 下载vbox镜像
 
-
 为本地仓库添加box方法有2种，box是vagrant的镜像。
 
 * 第一种方法是先使用curl或者wget等工具下载镜像，再添加。<font color=red size=3>推荐</font>
-
 
 ```bash
 ## .box文件比较大，也可以下载下来，再调用vagrant box add
@@ -132,6 +126,7 @@ end
 ```
 
 ## 启动
+
 ```bash
 vagrant up n11
 vagrant ssh n11

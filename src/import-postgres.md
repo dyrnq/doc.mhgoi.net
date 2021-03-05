@@ -1,5 +1,7 @@
 # 创建数据库
 
+## create-database
+
 ```sql
 -- create database
 create database mhgoi_blog with encoding='utf8';
@@ -19,6 +21,7 @@ GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public to jack;
 
 ```
 
+## postgres11-schema-and-data
 
 | database-version | remark          | sql                                                                                          |
 |------------------|-----------------|----------------------------------------------------------------------------------------------|
@@ -26,6 +29,7 @@ GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public to jack;
 | postgres11       | only data       | <https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-data-pg11.sql>   |
 | postgres11       | scheme and data | <https://github.com/dyrnq/mhgoi-blog-deploy/tree/main/sql/postgres/postgres-pg11.sql>        |
 
+## postgres12-schema-and-data
 
 | database-version | remark          | sql                                                                                          |
 |------------------|-----------------|----------------------------------------------------------------------------------------------|

@@ -8,7 +8,6 @@
 
 下载解压缩后,配置好NODE_HOME和PATH变量，然后执行`node --version`查看java版本
 
-
 ```bash
 jim@debian:~$ node --version
 v14.15.4

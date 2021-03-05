@@ -5,11 +5,13 @@
 > 参考  [http://nginx.org/en/docs/install.html](http://nginx.org/en/docs/install.html)
 
 ### debian
+
 ```bash
 apt install nginx
 ```
 
 ### centos
+
 ```bash
 yum install nginx
 ```

@@ -1,5 +1,3 @@
-
-
 # postgresql
 
 ## postgresql-11.x
@@ -26,7 +24,6 @@ docker run -d --name postgres12 \
 -v /data/lib/postgres12:/var/lib/postgresql/data postgres:12.5
 ```
 
-
 ## postgresql-13.x
 
 ```bash
@@ -38,4 +35,3 @@ docker run -d --name postgres13 \
 -p 5432:5432 \
 -v /data/lib/postgres13:/var/lib/postgresql/data postgres:13.2
 ```
-

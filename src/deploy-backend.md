@@ -8,6 +8,7 @@ mvn spring-boot:run
 ```
 
 ## 打包
+
 ```bash
 cd mhgoi-blog/backend
 ./mvnw clean package -DskipTests=true
@@ -17,6 +18,7 @@ cd mhgoi-blog/backend
 
 创建一个覆盖配置文件,增加一个jdbc的配置片段，覆盖jar包中的参数
 vi $(pwd)/override.yml
+
 ```yml
 spring:
   profiles: prod-mysql8
@@ -26,7 +28,6 @@ spring:
     username: jerry
     password: jerry
 ```
-
 
 ```bash
 java \
@@ -55,8 +56,6 @@ kill -9 $(cat /tmp/mhgoi.pid)
 # or
 kill -s KILL $(cat /tmp/mhgoi.pid)
 ```
-
-
 
 ## systemd
 
@@ -111,7 +110,6 @@ systemctl restart mhgoi;
 systemctl --full --no-pager status mhgoi;
 ```
 
-
 ## troubleshooting
 
 ```bash
@@ -158,8 +156,8 @@ jmap -clstats $(systemctl show --property MainPID --value mhgoi)
 journalctl -k --no-pager |grep -Ei "oom|kill|error|java"
 ```
 
-
 ## ref
+
 * <https://visualvm.github.io/download.html>
 * [https://github.com/fabric8io-images/run-java-sh](https://github.com/fabric8io-images/run-java-sh)
 * <https://github.com/bcicen/ctop/releases/download/v0.7.5/ctop-0.7.5-linux-amd64>

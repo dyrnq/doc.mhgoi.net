@@ -1,5 +1,3 @@
-
-
 # mysql
 
 ## mysql-5.7.x
@@ -15,8 +13,8 @@ docker run -d --name mysql57 \
 mysql:5.7.32 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-time-zone=+8:00
 ```
 
-
 ## mysql-8
+
 ```bash
 mkdir -p /data/lib/mysql8;
 docker run -d --name mysql8 \
@@ -27,5 +25,3 @@ docker run -d --name mysql8 \
 -p 13306:3306 \
 mysql:8.0.23 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-time-zone=+8:00 --innodb-dedicated-server=on
 ```
-
-

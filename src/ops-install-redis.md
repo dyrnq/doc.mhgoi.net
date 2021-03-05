@@ -1,9 +1,6 @@
-
-
 # redis
 
 redis使用`docker run`快速安装
-
 
 ```bash
 docker run -d --name=redis \

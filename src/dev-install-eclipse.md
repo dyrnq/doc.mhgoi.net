@@ -6,7 +6,6 @@
 
 ![download-eclipse](./img/download-eclipse.png)
 
-
 ## 下载lombok
 
 从[https://projectlombok.org/download](https://projectlombok.org/download)下载lombok.jar
@@ -16,6 +15,7 @@
 ```bash
 java -jar lombok.jar
 ```
+
 ![install-lombok](./img/install-lombok.png)
 
 如果提示`Can't find IDE`,则需要选择手工选择Eclipse的安装路径(上图的Specify location)，再点击install！

@@ -1,7 +1,5 @@
-
-
-
 # cockroachdb
+
 CockroachDB兼容PostgreSQL协议
 
 ```bash
@@ -25,6 +23,7 @@ cockroach cert create-node --certs-dir=/opt/certs --ca-key=/opt/certs/ca.key --l
 cockroach cert create-client --certs-dir=/opt/certs --ca-key=/opt/certs/ca.key --lifetime=439200h0m0s --overwrite root
 
 ```
+
 ```bash
 docker run -d \
 --restart always \
@@ -63,14 +62,13 @@ clusterID:           38e64d7c-64a2-4093-a1bd-fd41ca780ebd
 nodeID:              1
 ```
 
-
-
 ```bash
 docker exec -it cockroach bash
 cockroach sql --host=cockroach:26257 --certs-dir=/opt/certs
 CREATE DATABASE mhgoi_blog;
 CREATE USER jack WITH PASSWORD '666666';
 ```
+
 导入数据，文件目录存放在容器的`/cockroach/cockroach-data/extern/`目录
 
 ```bash

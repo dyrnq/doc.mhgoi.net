@@ -4,8 +4,7 @@ VirtualBox是功能强大的x86和AMD64 / Intel64虚拟化产品，适用于企�
 
 ## install
 
-> https://www.virtualbox.org/
-
+> For more information, see <https://www.virtualbox.org/>
 
 ## ref
 

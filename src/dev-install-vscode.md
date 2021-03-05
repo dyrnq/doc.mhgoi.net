@@ -6,7 +6,6 @@ Visual Studio Code是一个轻量级但功能强大的源代码编辑器，可�
 
 [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
-
 ## 推荐插件
 
-Beautify、Docker、Vetur
+Beautify、Docker、Vetur、markdownlint、ShellCheck
