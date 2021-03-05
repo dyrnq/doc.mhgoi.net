@@ -164,9 +164,9 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#vagrant" id="vagrant">Vagrant</a></h1>
-<p>Vagrant可以理解为针对虚拟机的<code>docker</code>，可以方便拉取别人制作好的虚机镜像后启动一个虚拟机实例。</p>
-<p>通常可以不用自己安装虚机，可以像<code>docker pull</code>一样从Vagrant的app仓库拉取操作系统官方制作好的box（镜像），ubuntu和centos都有官方自己制作的镜像。</p>
-<p>Vagrant不仅可以操控virtualbox，还可以操控vmware等其他虚拟化方案。</p>
+<p>Vagrant可以理解为针对虚拟机的<code>docker</code>，可以方便拉取别人制作好的虚拟机镜像后启动一个虚拟机实例。</p>
+<p>通常可以不用自己安装虚拟机，可以像<code>docker pull</code>一样从Vagrant的app仓库拉取制作好的box（镜像），ubuntu和centos都有官方自己制作的镜像。</p>
+<p>Vagrant不仅可以操控virtualbox，还可以操控vmware、libvirt、hyperv等其他虚拟化方案。</p>
 <h2><a class="header" href="#install" id="install">install</a></h2>
 <p>文档 <a href="https://www.vagrantup.com/downloads">https://www.vagrantup.com/downloads</a></p>
 <p>mac下安装Vagrant可以通过brew安装</p>
@@ -204,7 +204,7 @@ vagrant box add ubuntu2004 https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-ima
 <li>更多os镜像 <a href="https://app.vagrantup.com/boxes/search">https://app.vagrantup.com/boxes/search</a></li>
 </ul>
 <h2><a class="header" href="#创建vagrantfile" id="创建vagrantfile">创建Vagrantfile</a></h2>
-<p>Vagrantfile是一个虚机实例的配置，比如cpu多少核、内存多大啊</p>
+<p>Vagrantfile是一个虚拟机实例的配置，比如cpu多少核、内存多大啊</p>
 <pre><code class="language-bash">mkdir vmworkspace
 cd vmworkspace
 vi Vagrantfile

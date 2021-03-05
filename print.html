@@ -325,6 +325,12 @@ yum install git
 <p><a href="https://desktop.github.com/">https://desktop.github.com/</a></p>
 <h2><a class="header" href="#github-cli可选" id="github-cli可选">Github cli(可选)</a></h2>
 <p><a href="https://github.com/cli/cli">https://github.com/cli/cli</a></p>
+<h2><a class="header" href="#git入门推荐" id="git入门推荐">git入门推荐</a></h2>
+<ul>
+<li><a href="https://wkevin.github.io/GitChat/gitchat.html">https://wkevin.github.io/GitChat/gitchat.html</a></li>
+<li><a href="https://backlog.com/git-tutorial/cn/">https://backlog.com/git-tutorial/cn/</a></li>
+<li><a href="https://rogerdudler.github.io/git-guide/index.zh.html">https://rogerdudler.github.io/git-guide/index.zh.html</a></li>
+</ul>
 <h1><a class="header" href="#nodejs" id="nodejs">nodejs</a></h1>
 <h2><a class="header" href="#下载nodejs" id="下载nodejs">下载nodejs</a></h2>
 <p>从<a href="https://nodejs.org/">https://nodejs.org/</a>下载nodejs</p>
@@ -359,9 +365,9 @@ npm cache clean -f
 <li><a href="http://dblab.xmu.edu.cn/blog/2760-2/">在Windows中使用VirtualBox安装Ubuntu虚拟机</a></li>
 </ul>
 <h1><a class="header" href="#vagrant" id="vagrant">Vagrant</a></h1>
-<p>Vagrant可以理解为针对虚拟机的<code>docker</code>，可以方便拉取别人制作好的虚机镜像后启动一个虚拟机实例。</p>
-<p>通常可以不用自己安装虚机，可以像<code>docker pull</code>一样从Vagrant的app仓库拉取操作系统官方制作好的box（镜像），ubuntu和centos都有官方自己制作的镜像。</p>
-<p>Vagrant不仅可以操控virtualbox，还可以操控vmware等其他虚拟化方案。</p>
+<p>Vagrant可以理解为针对虚拟机的<code>docker</code>，可以方便拉取别人制作好的虚拟机镜像后启动一个虚拟机实例。</p>
+<p>通常可以不用自己安装虚拟机，可以像<code>docker pull</code>一样从Vagrant的app仓库拉取制作好的box（镜像），ubuntu和centos都有官方自己制作的镜像。</p>
+<p>Vagrant不仅可以操控virtualbox，还可以操控vmware、libvirt、hyperv等其他虚拟化方案。</p>
 <h2><a class="header" href="#install-1" id="install-1">install</a></h2>
 <p>文档 <a href="https://www.vagrantup.com/downloads">https://www.vagrantup.com/downloads</a></p>
 <p>mac下安装Vagrant可以通过brew安装</p>
@@ -399,7 +405,7 @@ vagrant box add ubuntu2004 https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-ima
 <li>更多os镜像 <a href="https://app.vagrantup.com/boxes/search">https://app.vagrantup.com/boxes/search</a></li>
 </ul>
 <h2><a class="header" href="#创建vagrantfile" id="创建vagrantfile">创建Vagrantfile</a></h2>
-<p>Vagrantfile是一个虚机实例的配置，比如cpu多少核、内存多大啊</p>
+<p>Vagrantfile是一个虚拟机实例的配置，比如cpu多少核、内存多大啊</p>
 <pre><code class="language-bash">mkdir vmworkspace
 cd vmworkspace
 vi Vagrantfile
@@ -487,13 +493,13 @@ vagrant ssh n11
 <p>首先整理下概念</p>
 <ul>
 <li>Host：宿主机</li>
-<li>Guest: 虚机</li>
+<li>Guest: 虚拟机</li>
 </ul>
 <p>这里记录下我的NAT方法</p>
-<p>打开VirtualBox中的这台虚机--&gt;设置--&gt;网络--&gt;高级--&gt;端口转发</p>
+<p>打开VirtualBox中的这台虚拟机--&gt;设置--&gt;网络--&gt;高级--&gt;端口转发</p>
 <p><img src="./img/vm-network1.png" alt="vm-network1" /></p>
 <p><img src="./img/vm-network2.png" alt="vm-network2" /></p>
-<p>其中每一行是一个端口映射，主机IP固定写0.0.0.0，子系统IP不用写。主机端口写映射到主机的端口，子系统端口写虚机要映射出来的端口。</p>
+<p>每一行是一个端口映射，主机IP固定写0.0.0.0，子系统IP不用写。主机端口写映射到主机的端口，子系统端口写虚拟机要映射出来的端口。</p>
 <p>比如要映射虚拟机的22端口到宿主机，这里由于宿主机的22端口被宿主机的sshd占用了，所以这里不能再用22端口映射，所以改成了28222</p>
 <table><thead><tr><th>名称</th><th>协议</th><th>主机IP</th><th>主机端口</th><th>子系统IP</th><th>子系统端口</th></tr></thead><tbody>
 <tr><td>Rule1</td><td>TCP</td><td>0.0.0.0</td><td>28222</td><td></td><td>22</td></tr>
@@ -506,10 +512,6 @@ vagrant ssh n11
 </code></pre>
 <p>比如这句mysql容器，首先把容器3306端口映射到容器的宿主机(vm)，然后再把vm的3306映射到vm的宿主机。</p>
 <p>这样通过两层网络转发，就可以在宿主机直接访问容器的3306数据库了。</p>
-<h1><a class="header" href="#推荐" id="推荐">推荐</a></h1>
-<ul>
-<li><font face="黑体" color=green size=4>推荐centos7/8、debian10、ubuntu20.04等服务器操作系统</font></li>
-</ul>
 <h1><a class="header" href="#安装docker" id="安装docker">安装docker</a></h1>
 <p>安装docker主要是为了跑数据库、redis、直接拉起hub.docker.com上的镜像</p>
 <h2><a class="header" href="#从系统安装" id="从系统安装">从系统安装</a></h2>
@@ -525,9 +527,15 @@ vagrant ssh n11
 </ul>
 <h2><a class="header" href="#开发环境" id="开发环境">开发环境</a></h2>
 <ul>
-<li><font face="黑体" color=green size=4>推荐在linux,centos7/8、debian10、ubuntu20.04等服务器操作系统上安装docker！</font></li>
-<li><font color=red size=3><em>不要在mac上或者windows直接安装docker。</em></font></li>
-<li>可以考虑在mac或者window上安装一个VirtualBox或者VMware来启动一个linux虚拟机，然后再在这个linux虚拟机中再安装Docker。</li>
+<li><font face="黑体" color=green size=4>推荐在linux,centos7/8、debian10、ubuntu20.04等linux服务器操作系统上安装docker！</font></li>
+<li><font color=red size=3><em>不推荐在mac上或windows安装docker-desktop。</em></font></li>
+<li>可以考虑在mac或window上安装一个VirtualBox或VMware来启动一个linux虚拟机，然后在这个linux虚拟机中安装docker。</li>
+</ul>
+<h2><a class="header" href="#docker入门推荐" id="docker入门推荐">docker入门推荐</a></h2>
+<ul>
+<li><a href="https://yeasy.gitbooks.io/docker_practice/">https://yeasy.gitbooks.io/docker_practice/</a></li>
+<li><a href="https://github.com/twtrubiks/docker-tutorial">https://github.com/twtrubiks/docker-tutorial</a></li>
+<li><a href="https://gist.github.com/StevenACoffman/41fee08e8782b411a4a26b9700ad7af5">https://gist.github.com/StevenACoffman/41fee08e8782b411a4a26b9700ad7af5</a></li>
 </ul>
 <h1><a class="header" href="#数据库" id="数据库">数据库</a></h1>
 <p>数据库使用<code>docker run</code>快速安装，以下命令为示范命令，可以选择其中一个</p>

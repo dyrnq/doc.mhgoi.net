@@ -169,13 +169,13 @@
 <p>首先整理下概念</p>
 <ul>
 <li>Host：宿主机</li>
-<li>Guest: 虚机</li>
+<li>Guest: 虚拟机</li>
 </ul>
 <p>这里记录下我的NAT方法</p>
-<p>打开VirtualBox中的这台虚机--&gt;设置--&gt;网络--&gt;高级--&gt;端口转发</p>
+<p>打开VirtualBox中的这台虚拟机--&gt;设置--&gt;网络--&gt;高级--&gt;端口转发</p>
 <p><img src="./img/vm-network1.png" alt="vm-network1" /></p>
 <p><img src="./img/vm-network2.png" alt="vm-network2" /></p>
-<p>其中每一行是一个端口映射，主机IP固定写0.0.0.0，子系统IP不用写。主机端口写映射到主机的端口，子系统端口写虚机要映射出来的端口。</p>
+<p>每一行是一个端口映射，主机IP固定写0.0.0.0，子系统IP不用写。主机端口写映射到主机的端口，子系统端口写虚拟机要映射出来的端口。</p>
 <p>比如要映射虚拟机的22端口到宿主机，这里由于宿主机的22端口被宿主机的sshd占用了，所以这里不能再用22端口映射，所以改成了28222</p>
 <table><thead><tr><th>名称</th><th>协议</th><th>主机IP</th><th>主机端口</th><th>子系统IP</th><th>子系统端口</th></tr></thead><tbody>
 <tr><td>Rule1</td><td>TCP</td><td>0.0.0.0</td><td>28222</td><td></td><td>22</td></tr>
