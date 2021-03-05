@@ -2,11 +2,11 @@
 
 # Vagrant
 
-Vagrant可以理解为针对虚拟机的`docker`，可以方便拉取别人制作好的虚机镜像后启动一个虚拟机实例。
+Vagrant可以理解为针对虚拟机的`docker`，可以方便拉取别人制作好的虚拟机镜像后启动一个虚拟机实例。
 
-通常可以不用自己安装虚机，可以像`docker pull`一样从Vagrant的app仓库拉取操作系统官方制作好的box（镜像），ubuntu和centos都有官方自己制作的镜像。
+通常可以不用自己安装虚拟机，可以像`docker pull`一样从Vagrant的app仓库拉取制作好的box（镜像），ubuntu和centos都有官方自己制作的镜像。
 
-Vagrant不仅可以操控virtualbox，还可以操控vmware等其他虚拟化方案。
+Vagrant不仅可以操控virtualbox，还可以操控vmware、libvirt、hyperv等其他虚拟化方案。
 
 ## install
 
@@ -58,7 +58,7 @@ vagrant box add ubuntu2004 https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-ima
 
 ## 创建Vagrantfile
 
-Vagrantfile是一个虚机实例的配置，比如cpu多少核、内存多大啊
+Vagrantfile是一个虚拟机实例的配置，比如cpu多少核、内存多大啊
 
 ```bash
 mkdir vmworkspace

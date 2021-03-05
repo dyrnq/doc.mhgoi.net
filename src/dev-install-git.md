@@ -23,3 +23,9 @@ yum install git
 ## Github cli(可选)
 
 [https://github.com/cli/cli](https://github.com/cli/cli)
+
+## git入门推荐
+
+* <https://wkevin.github.io/GitChat/gitchat.html>
+* <https://backlog.com/git-tutorial/cn/>
+* <https://rogerdudler.github.io/git-guide/index.zh.html>

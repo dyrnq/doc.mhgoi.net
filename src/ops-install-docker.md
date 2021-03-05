@@ -13,6 +13,13 @@
 
 
 ## 开发环境
-- <font face="黑体" color=green size=4>推荐在linux,centos7/8、debian10、ubuntu20.04等服务器操作系统上安装docker！</font>
-- <font color=red size=3>_不要在mac上或者windows直接安装docker。_</font>
-- 可以考虑在mac或者window上安装一个VirtualBox或者VMware来启动一个linux虚拟机，然后再在这个linux虚拟机中再安装Docker。
+- <font face="黑体" color=green size=4>推荐在linux,centos7/8、debian10、ubuntu20.04等linux服务器操作系统上安装docker！</font>
+- <font color=red size=3>_不推荐在mac上或windows安装docker-desktop。_</font>
+- 可以考虑在mac或window上安装一个VirtualBox或VMware来启动一个linux虚拟机，然后在这个linux虚拟机中安装docker。
+
+
+## docker入门推荐
+
+- <https://yeasy.gitbooks.io/docker_practice/>
+- <https://github.com/twtrubiks/docker-tutorial>
+- <https://gist.github.com/StevenACoffman/41fee08e8782b411a4a26b9700ad7af5>
