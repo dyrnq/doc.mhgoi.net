@@ -10,7 +10,7 @@
 
 ## 从二进制安装
 
-* [https://docs.docker.com/engine/install/binaries/](https://docs.docker.com/engine/install/binaries/) 
+* [https://docs.docker.com/engine/install/binaries/](https://docs.docker.com/engine/install/binaries/)
 * [https://download.docker.com/linux/static/stable/x86_64/](https://download.docker.com/linux/static/stable/x86_64/)
 
 
