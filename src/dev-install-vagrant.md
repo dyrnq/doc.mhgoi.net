@@ -128,8 +128,14 @@ end
 ## 启动
 
 ```bash
+## 启动
 vagrant up n11
+## ssh登录
 vagrant ssh n11
+## 关机
+vagrant halt n11
+## 删除虚拟机
+vagrant destroy n11
 ```
 
 <font color=red size=3>使用Vagrant的好处是可以快速的重新获取一个全新的既定的vm</font>，比如用下边这条语句
@@ -139,6 +145,8 @@ vagrant destroy n11 -f && vagrant up n11 && vagrant ssh n11
 ```
 
 表示强制销毁n11---->重新建立n11---->ssh登录到n11
+
+这样，简单实现了本地开发环境的IaC。
 
 ## ref
 
