@@ -273,13 +273,20 @@ end
 
 </code></pre>
 <h2><a class="header" href="#启动" id="启动">启动</a></h2>
-<pre><code class="language-bash">vagrant up n11
+<pre><code class="language-bash">## 启动
+vagrant up n11
+## ssh登录
 vagrant ssh n11
+## 关机
+vagrant halt n11
+## 删除虚拟机
+vagrant destroy n11
 </code></pre>
 <p><font color=red size=3>使用Vagrant的好处是可以快速的重新获取一个全新的既定的vm</font>，比如用下边这条语句</p>
 <pre><code class="language-bash">vagrant destroy n11 -f &amp;&amp; vagrant up n11 &amp;&amp; vagrant ssh n11 
 </code></pre>
 <p>表示强制销毁n11----&gt;重新建立n11----&gt;ssh登录到n11</p>
+<p>这样，简单实现了本地开发环境的IaC。</p>
 <h2><a class="header" href="#ref" id="ref">ref</a></h2>
 <ul>
 <li><a href="https://codebays.com/server/171.html">Vagrant搭建开发测试环境</a></li>
