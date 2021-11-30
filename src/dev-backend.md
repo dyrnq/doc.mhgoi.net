@@ -3,7 +3,7 @@
 ## 下载代码
 
 ```bash
-git clone http://github.com/dyrnq/mhgoi-blog
+git clone https://github.com/dyrnq/mhgoi-blog.git
 ```
 
 ## Eclipse导入项目
