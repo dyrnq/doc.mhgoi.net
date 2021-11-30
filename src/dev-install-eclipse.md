@@ -20,6 +20,12 @@ java -jar lombok.jar
 
 如果提示`Can't find IDE`,则需要选择手工选择Eclipse的安装路径(上图的Specify location)，再点击install！
 
+```bash
+wget https://projectlombok.org/downloads/lombok.jar
+
+echo "-javaagent:$(pwd)/lombok.jar" >> eclipse.ini
+```
+
 ## 配置maven
 
 这一步是统一命令行(shell)中使用mvn和Eclipse中maven使用相同的设置
