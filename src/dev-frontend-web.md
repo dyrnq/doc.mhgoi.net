@@ -3,7 +3,7 @@
 ## 下载代码
 
 ```bash
-git clone http://github.com/dyrnq/mhgoi-blog
+git clone https://github.com/dyrnq/mhgoi-blog.git
 ```
 
 ## 运行
@@ -11,8 +11,8 @@ git clone http://github.com/dyrnq/mhgoi-blog
 ```bash
 cd mhgoi-blog/frontend/web
 
-# 只需运行一次 run install
-npm run install
+# 只需运行一次 npm install
+npm install
 
 npm run dev
 ```
