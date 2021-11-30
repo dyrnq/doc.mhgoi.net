@@ -310,6 +310,10 @@ OS name: &quot;linux&quot;, version: &quot;4.19.0-13-amd64&quot;, arch: &quot;am
 </code></pre>
 <p><img src="./img/install-lombok.png" alt="install-lombok" /></p>
 <p>如果提示<code>Can't find IDE</code>,则需要选择手工选择Eclipse的安装路径(上图的Specify location)，再点击install！</p>
+<pre><code class="language-bash">wget https://projectlombok.org/downloads/lombok.jar
+
+echo &quot;-javaagent:$(pwd)/lombok.jar&quot; &gt;&gt; eclipse.ini
+</code></pre>
 <h2><a class="header" href="#配置maven" id="配置maven">配置maven</a></h2>
 <p>这一步是统一命令行(shell)中使用mvn和Eclipse中maven使用相同的设置</p>
 <p><img src="./img/eclipse-maven.png" alt="eclipse-maven" /></p>
@@ -763,7 +767,7 @@ GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public to jack;
 </tbody></table>
 <h1><a class="header" href="#后端代码" id="后端代码">后端代码</a></h1>
 <h2><a class="header" href="#下载代码" id="下载代码">下载代码</a></h2>
-<pre><code class="language-bash">git clone http://github.com/dyrnq/mhgoi-blog
+<pre><code class="language-bash">git clone https://github.com/dyrnq/mhgoi-blog.git
 </code></pre>
 <h2><a class="header" href="#eclipse导入项目" id="eclipse导入项目">Eclipse导入项目</a></h2>
 <p><img src="img/import.png" alt="import" /></p>
@@ -791,13 +795,13 @@ ln -s ${MAVEN_HOME}/conf/settings.xml ~/.m2/settings.xml
 </code></pre>
 <h1><a class="header" href="#前端代码admin" id="前端代码admin">前端代码admin</a></h1>
 <h2><a class="header" href="#下载代码-1" id="下载代码-1">下载代码</a></h2>
-<pre><code class="language-bash">git clone http://github.com/dyrnq/mhgoi-blog
+<pre><code class="language-bash">git clone https://github.com/dyrnq/mhgoi-blog.git
 </code></pre>
 <h2><a class="header" href="#运行-1" id="运行-1">运行</a></h2>
 <pre><code class="language-bash">cd mhgoi-blog/frontend/admin
 
-# 只需运行一次 run install
-npm run install
+# 只需运行一次 npm install
+npm install
 
 npm run dev
 </code></pre>
@@ -809,13 +813,13 @@ npm run dev
 </code></pre>
 <h1><a class="header" href="#前端代码web" id="前端代码web">前端代码web</a></h1>
 <h2><a class="header" href="#下载代码-2" id="下载代码-2">下载代码</a></h2>
-<pre><code class="language-bash">git clone http://github.com/dyrnq/mhgoi-blog
+<pre><code class="language-bash">git clone https://github.com/dyrnq/mhgoi-blog.git
 </code></pre>
 <h2><a class="header" href="#运行-2" id="运行-2">运行</a></h2>
 <pre><code class="language-bash">cd mhgoi-blog/frontend/web
 
-# 只需运行一次 run install
-npm run install
+# 只需运行一次 npm install
+npm install
 
 npm run dev
 </code></pre>
